@@ -125,8 +125,9 @@ class tx_mhtreeview extends tslib_pibase {
           $icon     = 'plus';
         }
         $contentTitle .= '<p class="tx_mhtreeview_title"><img class="tx_mhtreeview_toggleImg" id="tx_mhtreeview_toggleImg' . $parent_count . '" src="' . t3lib_extMgm::siteRelPath('mh_treeview') . 'res/' . $icon . '.gif" onclick="tx_mhtreeview_toggle(' . $parent_count . ');" />&nbsp;';
-        $contentTitle  .= $this->title;
-        $contentTitle  .= '</p>';
+        $contentTitle .= '<a href="javascript:tx_mhtreeview_toggle(' . $parent_count . ');" class="tx_mhtreeview_title">';
+        $contentTitle .= $this->title;
+        $contentTitle .= '</a></p>';
       } else {
         if($this->expandAll > 0) {
           $content  .= '<ul id="tx_mhtreeview-lvl' . $parent_count . '" class="tx_mhtreeview-node">';
@@ -162,13 +163,20 @@ class tx_mhtreeview extends tslib_pibase {
         } else {
           $className = 'class="tx_mhtreeview_no"';
         }
-       
-        if($this->isSub($row[$this->content[0]])) {
+                 
+        if($this->isSub($row[$this->content[0]])) { 
           $icon     = $this->expandAll == 1 ? 'minus' : 'plus';
           $parent_count++;
+          
+          if($this->conf['dontLinkMainNode'] == 1) {
+            $temp_js2 = $temp_js;
+          } else {
+            $temp_js2 = 'href="javascript:tx_mhtreeview_toggle(' . $parent_count . ');"';
+          }
+          
           $content  .= '<li id="tx_mhtreeview_' . $row[$this->content[0]] . '">';
           $content  .= '<img class="tx_mhtreeview_toggleImg" id="tx_mhtreeview_toggleImg' . $parent_count . '" src="' . t3lib_extMgm::siteRelPath('mh_treeview') . 'res/' . $icon . '.gif" onclick="tx_mhtreeview_toggle(' . $parent_count . ');" />&nbsp;';
-          $content  .= '<a ' . $className . ' id="tx_mhtreeview-node_' . $row[$this->content[0]] . '" ' . $temp_js . '>';
+          $content  .= '<a ' . $className . ' id="tx_mhtreeview-node_' . $row[$this->content[0]] . '" ' . $temp_js2 . '>';
           $content  .= $row[$this->content[1]];
           $content  .= '</a>';
           $content  .= $this->getElements($row[$this->content[0]], $parent_count);
