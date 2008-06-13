@@ -167,11 +167,11 @@ class tx_mhtreeview extends tslib_pibase {
         if($this->isSub($row[$this->content[0]])) { 
           $icon     = $this->expandAll == 1 ? 'minus' : 'plus';
           $parent_count++;
-          
+          var_dump($this->conf['dontLinkMainNode']);
           if($this->conf['dontLinkMainNode'] == 1) {
-            $temp_js2 = $temp_js;
-          } else {
             $temp_js2 = 'href="javascript:tx_mhtreeview_toggle(' . $parent_count . ');"';
+          } else {
+            $temp_js2 = $temp_js;
           }
           
           $content  .= '<li id="tx_mhtreeview_' . $row[$this->content[0]] . '">';
