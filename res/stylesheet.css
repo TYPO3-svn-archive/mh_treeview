@@ -1,26 +1,26 @@
-.tx-mhtreeview {
-  border:1px solid #ddd;
-  overflow:auto;
-  height:100px;
-  padding:3px;
-}
-
-a.tx_mhtreeview_no:link,a.tx_mhtreeview_no:hover,a.tx_mhtreeview_no:visited  {
-  color:black;
-  text-decoration:none;
-}
-
-a.tx_mhtreeview_act:link,a.tx_mhtreeview_act:hover,a.tx_mhtreeview_act:visited  {
-  color:black;
-  font-style:oblique;
-}
-
-.tx_mhtreeview_title  { padding:0px; margin:0px; }
-
-ul.tx_mhtreeview-node     { padding-left: 10px;  }
-ul.tx_mhtreeview-node li  { margin-left:0; }
-
-.tx_mhtreeview_toggleImg  { }
-
-.tx_mhtreeview_no   { background-color:white; }
-.tx_mhtreeview_act  { background-color:yellow; }
+.tx-mhtreeview {
+  border:1px solid #ddd;
+  overflow:auto;
+  height:100px;
+  padding:3px;
+}
+
+a.tx_mhtreeview_no:link,a.tx_mhtreeview_no:hover,a.tx_mhtreeview_no:visited  {
+  color:black;
+  text-decoration:none;
+}
+
+a.tx_mhtreeview_act:link,a.tx_mhtreeview_act:hover,a.tx_mhtreeview_act:visited  {
+  color:black;
+  font-style:oblique;
+}
+
+.tx_mhtreeview_title  { padding:0px; margin:0px; }
+
+ul.tx_mhtreeview-node     { padding-left: 10px;  }
+ul.tx_mhtreeview-node li  { margin-left:0; }
+
+.tx_mhtreeview_toggleImg  { }
+
+.tx_mhtreeview_no   { background-color:white; }
+.tx_mhtreeview_act  { background-color:yellow; }

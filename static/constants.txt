@@ -1,4 +1,4 @@
-plugin.tx_mhtreeview {
-  #cat=mh_treeview - General/file/a; type=file[html,htm,tmpl,txt]; label=Template File: HTML-template file.
-  templateFile = EXT:mh_treeview/res/template.html
+plugin.tx_mhtreeview {
+  #cat=mh_treeview - General/file/a; type=file[html,htm,tmpl,txt]; label=Template File: HTML-template file.
+  templateFile = EXT:mh_treeview/res/template.html
 }
